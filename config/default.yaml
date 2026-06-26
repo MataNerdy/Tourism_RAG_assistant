@@ -1,0 +1,25 @@
+data:
+  raw_data_url: "https://drive.google.com/uc?id=1P1BsvI2jPN3fEqjc2YZxmQ-MTs22WVUk"
+  raw_data_path: "data/raw/file.csv"
+  processed_data_path: "data/processed/tourism_rag.csv"
+  eval_data_path: "reports/df_eval_100.parquet"
+
+vector_store:
+  chroma_dir: "chroma_db/tourism"
+  collection_name: "tourism_rag"
+
+models:
+  embedding_model: "intfloat/multilingual-e5-base"
+  cleaning_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  reranker_model: "colbert-ir/colbertv2.0"
+  reader_model: "mistralai/Mistral-7B-Instruct-v0.3"
+  device: "cuda"
+
+preprocessing:
+  target_n_places: 250
+  similarity_threshold: 0.25
+  min_caption_len: 20
+  topk_per_place: 3
+  max_final_chars: 2500
+  random_state: 42
+
