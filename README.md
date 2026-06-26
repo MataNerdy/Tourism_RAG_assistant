@@ -206,6 +206,22 @@ Observed preprocessing summary from the original project:
 | Reranking | `colbert-ir/colbertv2.0` |
 | Reader LLM | `mistralai/Mistral-7B-Instruct-v0.3` |
 
+## Libraries
+
+The implementation uses standard Python ML and RAG tooling:
+
+| Area | Libraries |
+|---|---|
+| Data processing | `pandas`, `numpy`, `re`, `gdown` |
+| Embeddings | `sentence-transformers`, `langchain-community` Hugging Face embeddings |
+| Vector search | `chromadb`, LangChain `Chroma` vector store |
+| Reranking | `ragatouille` with ColBERTv2 |
+| LLM inference | `transformers`, `torch` |
+| Evaluation | `sentence-transformers`, `numpy`, `pandas`, `tqdm` |
+| Visualization | `matplotlib`, `plotly`, `scikit-learn`, `umap-learn` |
+| Demo UI | `streamlit` |
+| Packaging and tests | `setuptools`, `pytest` |
+
 ## Evaluation
 
 The project includes lightweight RAG evaluation utilities:
