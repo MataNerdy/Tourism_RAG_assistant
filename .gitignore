@@ -14,9 +14,11 @@ venv/
 *.log
 
 data/raw/
+data/data.csv
 data/processed/*.csv
 data/processed/*.parquet
 chroma_db/
 reports/*.parquet
 reports/*.html
+images/*_data.json
 
